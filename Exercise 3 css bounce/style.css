@@ -1,0 +1,40 @@
+.box {
+    border: 2px solid black;
+    height: 80vh;
+    width: 80vw;
+    position: relative;
+    background-color: grey;
+}
+
+.ball {
+    background-color: red;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    border: 1px solid black;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    animation: animateX 5s linear infinite, animateY 0.4s ease-out infinite alternate;
+}
+
+@keyframes animateX {
+    from {
+        left: 0
+    }
+
+    to {
+        left: calc(100% - 100px)
+    }
+
+}
+
+@keyframes animateY {
+    from {
+        bottom: 0%;
+    }
+
+    to {
+        bottom: calc(100% - 100px);
+    }
+}
